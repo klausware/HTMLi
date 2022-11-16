@@ -47,10 +47,10 @@ And some affect the page in some way, for example:
 <meta http-equiv="content-security-policy" content="default-src 'none'; base-uri 'self'">
 ```
 Moreover, CSP does not regulate such `<meta>` elements. `<meta http-equiv=...>` is a tag on the page that may emulate a subset of functions normally reserved for page headers. Similarly, some of these functions appear in Javascript, which is already heavily regulated by CSP. Dangerous functions that can be performed by `<meta http-equiv=...>` include:
-..*set-cookie,
-..*refresh:
-....*redirect to any regular URL,
-....*redirect to any data: URL.
+..* set-cookie,
+..* refresh:
+....* redirect to any regular URL,
+....* redirect to any data: URL.
 
 set-cookie instruction was removed from the standard, and is no longer supported at all in Firefox 68 and Chrome 65.
 
